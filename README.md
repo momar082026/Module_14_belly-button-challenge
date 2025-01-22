@@ -16,3 +16,4 @@ This project involves creating a web-based dashboard with the following features
 3. A Drop-Down Metadata Display showing key demographic information of the sample.
 
 File Structure
+
