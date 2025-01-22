@@ -15,5 +15,14 @@ This project involves creating a web-based dashboard with the following features
 2. A BubbleChart that plots the OTUs for each sample.
 3. A Drop-Down Metadata Display showing key demographic information of the sample.
 
+Final Project looks like the Following webpage:
+
+![alt text](image-1.png)
+
 File Structure
 
+static.js: JavaScript files, includes the code to handle D3.js and Plotly.js.
+index.html: The HTML structure for the dashboard.
+License
+Readme.md file: file that contains project description
+sample.json file: JSON file containing the data
