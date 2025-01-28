@@ -19,12 +19,12 @@ function buildMetadata(sample) {
 
     // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
-    Object.entries(result).forEach(([key, value]) => {
-      panel.append("h6").text(`${key}: ${value}`);
-    });
+
+    for (key in result) {
+      panel.append("h6").text(`${key}: ${result[key]}`);
+    }
   });
 }
-
 // function to build both charts
 function buildCharts(sample) {
   d3.json(
@@ -99,8 +99,6 @@ function buildCharts(sample) {
   });
 }
 
-// Render the Bar Chart
-
 // Function to run on page load
 function init() {
   d3.json(
@@ -115,9 +113,12 @@ function init() {
     // Use the list of sample names to populate the select options
     // Hint: Inside a loop, you will need to use d3 to append a new
     // option for each sample name.
-    sampleNames.forEach((sample) => {
-      selector.append("option").text(sample).property("value", sample);
-    });
+    for (let i = 0; i < sampleNames.length; i++) {
+      selector
+        .append("option")
+        .text(sampleNames[i])
+        .property("value", sampleNames[i]);
+    }
 
     // Get the first sample from the list
     let firstSample = sampleNames[0];
@@ -131,8 +132,8 @@ function init() {
 // Function for event listener
 function optionChanged(newSample) {
   // Build charts and metadata panel each time a new sample is selected
-  buildCharts(firstSample);
-  buildMetadata(firstSample);
+  buildCharts(newSample);
+  buildMetadata(newSample);
 }
 
 // Initialize the dashboard
