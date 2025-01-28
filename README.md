@@ -30,5 +30,3 @@ sample.json file: JSON file containing the data
 Link for Module_14 Challenge:
 
 https://momar082026.github.io/Module_14_belly-button-challenge/
-
-
